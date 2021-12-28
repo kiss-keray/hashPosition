@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>散列排布</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hash-item {
+            border-radius: 50%;
+        }
+
+        .box {
+            width: 50vw;
+            height: 20vh;
+            background-color: #ccc;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        #hash-box .hash-item {
+            width: 40px;
+            height: 40px;
+        }
+
+        #hash-box2 .hash-item {
+            width: 30px;
+            height: 30px;
+            border-radius: 0;
+        }
+        #hash-box3 .hash-item {
+            width: 30px;
+            height: 20px;
+            border-radius: 0;
+        }
+    </style>
+    <script src="./hashPosition.js"></script>
+</head>
+
+<body>
+    <h3>所有子元素宽高一样</h3>
+    <div id="hash-box" class="box">
+        <img src="https://img2.baidu.com/it/u=4007655538,2541780979&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img0.baidu.com/it/u=1278305757,2822101144&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3111990484,304293232&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=764384687,1643679613&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=794629454,954658115&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=2953908856,3466344438&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3433682779,1400769694&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+    </div>
+    <h3>子元素宽高在一定范围类</h3>
+    <div id="hash-box1" class="box">
+        <img src="https://img2.baidu.com/it/u=4007655538,2541780979&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img0.baidu.com/it/u=1278305757,2822101144&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3111990484,304293232&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=764384687,1643679613&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=794629454,954658115&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=2953908856,3466344438&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3433682779,1400769694&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+    </div>
+    <h3>方形元素排列</h3>
+    <div id="hash-box2" class="box">
+        <img src="https://img2.baidu.com/it/u=4007655538,2541780979&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img0.baidu.com/it/u=1278305757,2822101144&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3111990484,304293232&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=764384687,1643679613&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=794629454,954658115&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=2953908856,3466344438&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3433682779,1400769694&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+    </div>
+
+    <h3>长方形元素排列</h3>
+    <div id="hash-box3" class="box">
+        <img src="https://img2.baidu.com/it/u=4007655538,2541780979&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img0.baidu.com/it/u=1278305757,2822101144&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3111990484,304293232&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=764384687,1643679613&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=794629454,954658115&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=2953908856,3466344438&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img1.baidu.com/it/u=3433682779,1400769694&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+        <img src="https://img2.baidu.com/it/u=2194907370,184280558&fm=26&fmt=auto" class="hash-item" />
+    </div>
+    <script>
+        hashPosition(document.getElementById("hash-box"), 40);
+        hashPosition(document.getElementById("hash-box1"), {
+            minWidth: 20,
+            maxWidth: 50
+        });
+        hashPosition(document.getElementById("hash-box2"), {
+            width: 30,
+            space: 30 * (Math.pow(2,0.5) - 1)
+        });
+        hashPosition(document.getElementById("hash-box3"), {
+            width: 30,
+            space: 30 * (Math.pow(2,0.5) - 1)
+        });
+    </script>
+</body>
+
+</html>
